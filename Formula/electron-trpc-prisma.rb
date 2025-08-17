@@ -5,7 +5,7 @@ class ElectronTrpcPrisma < Formula
   
   if Hardware::CPU.arm?
     url "https://github.com/davidmcnamee/electron-trpc-prisma/releases/download/v#{version}/trpc-prisma-electron-#{version}-mac-arm64.tar.gz"
-    sha256 "PLACEHOLDER_SHA256_ARM64"
+    sha256 "21c3925bea56b9cec10eff8e46bebddcb908c18bd57e5eea546322da57813bca"
   else
     url "https://github.com/davidmcnamee/electron-trpc-prisma/releases/download/v#{version}/trpc-prisma-electron-#{version}-mac-x64.tar.gz"
     sha256 "PLACEHOLDER_SHA256_X64"

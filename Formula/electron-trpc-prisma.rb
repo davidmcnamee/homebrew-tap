@@ -13,10 +13,12 @@ class ElectronTrpcPrisma < Formula
 
   def install
     app = "trpc-prisma-electron.app"
-    prefix.install app
+    prefix.install Dir["*"]
     
-    # Create a command-line launcher
-    bin.install_symlink prefix/app/"Contents/MacOS/trpc-prisma-electron" => "trpc-prisma-electron"
+    # Create a command-line launcher if the app has a binary
+    if File.exist?("#{prefix}/#{app}/Contents/MacOS/trpc-prisma-electron")
+      bin.install_symlink "#{prefix}/#{app}/Contents/MacOS/trpc-prisma-electron" => "trpc-prisma-electron"
+    end
   end
 
   def caveats

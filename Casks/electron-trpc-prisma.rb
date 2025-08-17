@@ -1,6 +1,6 @@
 cask "electron-trpc-prisma" do
-  version "1.0.0"
-  sha256 "21c3925bea56b9cec10eff8e46bebddcb908c18bd57e5eea546322da57813bca"
+  version "1.0.5"
+  sha256 "98751856db9c0058a9c1467a729eaac1e2284cb64b8980525ceb76b37eaf0605"
 
   url "https://github.com/davidmcnamee/electron-trpc-prisma/releases/download/v#{version}/trpc-prisma-electron-#{version}-mac-arm64.tar.gz"
   name "Electron tRPC Prisma"

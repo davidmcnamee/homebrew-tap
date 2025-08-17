@@ -9,6 +9,14 @@ cask "electron-trpc-prisma" do
 
   app "trpc-prisma-electron.app"
   
+  postflight do
+    # Remove quarantine attribute to allow unsigned app to run
+    system_command "/usr/bin/xattr",
+                   args: ["-d", "com.apple.quarantine", "#{appdir}/trpc-prisma-electron.app"],
+                   sudo: false,
+                   must_succeed: false
+  end
+  
   zap trash: [
     "~/Library/Application Support/trpc-prisma-electron",
     "~/Library/Preferences/com.electron.trpc-prisma-electron.plist",
